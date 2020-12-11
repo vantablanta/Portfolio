@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
 
 <style>
     nav{
@@ -93,7 +93,11 @@
         grid-template-rows: 50px 400px;
         grid-template-columns: 300px 300px 100px 100px ;
         grid-template-areas: "  .      .    . area2   "
-                             "  area1      area3  .  ."
+                             "  area1      area3  .  .";
+        height:100vh;
+        padding-top: 0px;
+        margin-top: 0px;
+        height: 100vh;
                              
                             
                              
@@ -134,8 +138,8 @@
         grid-template-areas: "project-tiles    profile" ; 
      
     }
-    .project-tile  {        
-        
+    .project-tile  {  
+        padding-right:0px;      
         display: inline-grid;
         grid-template-rows:50% 50%;
         grid-template-columns: 30% 30% 30%;
@@ -144,17 +148,37 @@
     }
    .project-image{
        padding:20px;
-       margin: 20px; 
+       margin-top: 20px;
+       margin-right: 80px;
+       margin-left: 40px; 
        border:1px solid black;
-   }
+       
+    }
    #project-links{
        color:black;
        text-decoration: none;
        display: flex;
        flex-direction: column;
        line-height: 3;
-   }
+    }
 
+   #profile{
+       margin:20px;
+       box-sizing: border-box;
+       
+       background-image: url(Photos/background.jpg);
+       background-clip: border;
+    }
+     .profile-link{
+      position:relative;
+      display: inline-block;
+      top : 50%;
+      left:30px;
+    }
+
+@media (max-width: 700px){
+
+}
 
 </style>
 </head>
@@ -205,7 +229,20 @@
         </div>
     </div>
 
+    <div id ="profile" style= "grid-area: profile; box-sizing:border-box">
+        <a href="https://github.com/vantablanta" class="profile-link" target ="blank">
+            <img class="profile-link" src="https://img.icons8.com/wired/64/ffffff/github.png"/></a>
+        <a href="https://www.freecodecamp.org/vanta_blanta" class="profile-link"> 
+            <img class="profile-link" src="https://img.icons8.com/windows/64/ffffff/free-code-camp.png"/> </a>
+        <a href="https://twitter.com/vantablanta" class="profile-link"> 
+            <img class="profile-link" src="https://img.icons8.com/ios/64/ffffff/twitter--v1.png/"> </a>
+
+   
+    
+    </div>
+
 </section>
+
 
 
 
